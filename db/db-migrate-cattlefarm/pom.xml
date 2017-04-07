@@ -15,9 +15,9 @@
         <flyway.version>3.2.1</flyway.version>
         <mysql.driver.version>5.1.13</mysql.driver.version>
         <database.driver>com.mysql.jdbc.Driver</database.driver>
-        <database.url>jdbc:mysql://localhost:3306/test?autoreconnect=true</database.url>
+        <database.url>jdbc:mysql://localhost:3306/cattlefarm?autoreconnect=true</database.url>
         <database.username>root</database.username>
-        <database.password>root</database.password>
+        <database.password>Schneider@123</database.password>
     </properties>
 
     <dependencies>

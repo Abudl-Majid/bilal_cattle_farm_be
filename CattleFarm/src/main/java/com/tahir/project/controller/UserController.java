@@ -22,7 +22,7 @@ public class UserController {
   /*
    * This method will list all existing employees.
    */
-  @RequestMapping(value = { "/list" }, method = RequestMethod.GET)
+  @RequestMapping(value = { "/" }, method = RequestMethod.GET)
   @ResponseBody
   public List<User> listUsers(ModelMap model) {
 
@@ -34,7 +34,7 @@ public class UserController {
   /*
      * This method will provide the medium to add a new employee.
      */
-  @RequestMapping(value = { "/save" }, method = RequestMethod.POST)
+  @RequestMapping(value = { "/" }, method = RequestMethod.POST)
   public @ResponseBody User  saveUser(@RequestBody User User) {
     service.save(User);
     return User;
@@ -43,7 +43,7 @@ public class UserController {
   /*
    * This method will provide the medium to add a new employee.
    */
-  @RequestMapping(value = { "/update" }, method = RequestMethod.PUT)
+  @RequestMapping(value = { "/" }, method = RequestMethod.PUT)
   public @ResponseBody User  updateUser(@RequestBody User User) {
     service.update(User);
     return User;
@@ -52,7 +52,7 @@ public class UserController {
   /*
    * This method will provide the medium to add a new employee.
    */
-  @RequestMapping(produces = "application/json", value = { "/User/{User_id}" }, method = RequestMethod.GET)
+  @RequestMapping(produces = "application/json", value = { "/{User_id}" }, method = RequestMethod.GET)
   public @ResponseBody User  getUser(@PathVariable("User_id") Integer User_id) {
     return service.findByUserId(User_id);
   }
@@ -60,7 +60,7 @@ public class UserController {
   /*
   * This method will provide the medium to add a new employee.
   */
-  @RequestMapping(value = { "/User/{User_id}" }, method = RequestMethod.DELETE)
+  @RequestMapping(value = { "/{User_id}" }, method = RequestMethod.DELETE)
   public @ResponseBody void  deleteUser(@PathVariable("User_id") Integer User_id) {
     service.delete(User_id);
   }
